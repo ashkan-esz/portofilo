@@ -1,12 +1,13 @@
 import React from 'react';
 import {Nav, Navbar} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap'
+import PropTypes from 'prop-types';
 //todo : replace with a logo  and its href should be the home page
 //todo : fix the Routes  and active one's
 const NavBar = props => {
 
     return (
-        <Navbar variant="light" expand="sm" style={{backgroundColor: '#b1cadd'}}>
+        <Navbar variant="dark" expand="sm" style={{backgroundColor: props.color}}>
             <Navbar.Brand href="/home">Ashkan-Esz</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse className="justify-content-left">
@@ -26,6 +27,10 @@ const NavBar = props => {
             </Navbar.Collapse>
         </Navbar>
     );
+};
+
+NavBar.propTypes={
+    color : PropTypes.string.isRequired,
 };
 
 export default NavBar;

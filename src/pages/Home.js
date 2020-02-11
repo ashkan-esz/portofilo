@@ -4,8 +4,8 @@ import TopImage from "../components/TopImage";
 const Home = props => {
     return (
         <div>
-        <TopImage/>
-hello from home page
+            <TopImage image={require("../images/1.jpeg")}/>
+            hello from home page
         </div>
     );
 };

@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // style for react bootstrap
 function App() {
     return (
         <div>
-            <NavBar/>
+            <NavBar color="#071538"/>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/rezome" component={Rezome}/>
