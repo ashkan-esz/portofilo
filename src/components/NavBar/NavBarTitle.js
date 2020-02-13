@@ -6,6 +6,7 @@ const NavBarTitle = ({mobile}) => {
         <Container text>
             <Header
                 as='h2'
+                color={mobile ? null :"blue"}
                 content='The 1,000-mile marathon begins with the first step'
                 inverted
                 className={'navbar-header ' + (mobile ? " navbar-header-mobile " : " navbar-header-pc")}
