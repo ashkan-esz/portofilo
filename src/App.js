@@ -1,6 +1,7 @@
 import React, {Suspense} from 'react';
 import {Route, Switch} from 'react-router-dom';
-import 'semantic-ui-css/semantic.min.css';
+// import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-offline/semantic.min.css'; //use offline version of google fonts
 import NavBarTitle from "./components/NavBar/NavBarTitle";
 
 const Home = React.lazy(() => import( "./pages/Home"));
