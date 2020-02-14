@@ -1,8 +1,14 @@
 import React, {useState} from 'react';
-import {Container, Icon, Menu, Responsive, Segment, Sidebar} from "semantic-ui-react";
+// import {Container, Icon, Menu, Responsive, Segment, Sidebar} from "semantic-ui-react";
 import NavBarSocialIcons from "./NavBarSocialIcons";
 import MenuItems from "./MenuItems";
 import NavBarTitle from "./NavBarTitle";
+import Responsive from "semantic-ui-react/dist/commonjs/addons/Responsive";
+import Sidebar from "semantic-ui-react/dist/commonjs/modules/Sidebar";
+import Menu from "semantic-ui-react/dist/commonjs/collections/Menu";
+import Segment from "semantic-ui-react/dist/commonjs/elements/Segment";
+import Container from "semantic-ui-react/dist/commonjs/elements/Container";
+import Icon from "semantic-ui-react/dist/commonjs/elements/Icon";
 
 const getWidth = () => {
     const res = typeof window === 'undefined';
