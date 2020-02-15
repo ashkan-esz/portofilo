@@ -36,7 +36,6 @@ const NavBarForMobiles = () => {
                         size="huge"
                         fluid
                         vertical
-                        inverted
                         color="grey">
                         <MenuItems/>
                     </Menu>

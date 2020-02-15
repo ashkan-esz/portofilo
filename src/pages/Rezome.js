@@ -8,8 +8,4 @@ hello from rezome page
     );
 };
 
-Rezome.propTypes = {
-
-};
-
 export default Rezome;
