@@ -8,8 +8,4 @@ const PageNotFound = props => {
     );
 };
 
-PageNotFound.propTypes = {
-
-};
-
 export default PageNotFound;
