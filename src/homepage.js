@@ -4,7 +4,6 @@ import {Button, Container, Divider, Grid, Header, Image, List, Segment,} from 's
 const HomepageLayout = () => (
     <React.Fragment>
 
-
             <Segment style={{padding: '0em'}} vertical>
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>

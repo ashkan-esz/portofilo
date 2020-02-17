@@ -6,6 +6,9 @@
 .pnp.js
 
 /src/homepage.js
+/.storybook
+/src/stories
+
 
 # testing
 /coverage
