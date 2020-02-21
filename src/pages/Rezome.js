@@ -3,7 +3,8 @@ import React from 'react';
 const Rezome = props => {
     return (
         <div>
-hello from rezome page
+            hello from rezome page
+
         </div>
     );
 };
