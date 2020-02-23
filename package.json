@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
+    "natives": "^1.1.6",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -18,8 +19,10 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build-semantic": "cd src/semantic && gulp build-css build-assets",
+    "watch-semantic": "cd src/semantic && npm run build-semantic && gulp watch",
+    "start": " npm run build-semantic && react-app-rewired start",
+    "build": " npm run build-semantic && react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -46,6 +49,9 @@
     "@storybook/addons": "^5.3.13",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
+    "fomantic-ui": "^2.8.3",
+    "gulp": "^4.0.2",
+    "gulp-print": "^5.0.0",
     "react-app-rewired": "^2.1.5"
   }
 }
