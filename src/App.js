@@ -1,7 +1,8 @@
 import React, {Suspense} from 'react';
 import {Route, Switch} from 'react-router-dom';
 // import 'semantic-ui-offline/semantic.min.css';
-import './semantic/dist/dropdown/semantic.min.css';
+// import './semantic/dist/dropdown/semantic.min.css';
+import './dropdown/semantic.min.css';
 
 const NavBar = React.lazy(() => import("./components/NavBar/NavBar"));
 const Home = React.lazy(() => import( "./pages/Home"));
