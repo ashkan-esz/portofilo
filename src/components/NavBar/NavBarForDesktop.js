@@ -30,7 +30,7 @@ const NavBarForDesktop = () => {
                         vertical
                         raised
                         className="navbar-background-image"
-                        style={{height: '55vh'}}>
+                        style={{height: '65vh'}}>
 
                         <Menu
                             fixed={fixed ? 'top' : null}
