@@ -16,7 +16,9 @@
     "react-scripts": "3.3.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-offline": "^2.4.1-1",
-    "semantic-ui-react": "^0.88.2"
+    "semantic-ui-react": "^0.88.2",
+    "gulp": "^4.0.2",
+    "gulp-print": "^5.0.0"
   },
   "scripts": {
     "build-semantic": "cd src/semantic && gulp build-css build-assets",
@@ -50,8 +52,6 @@
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
     "fomantic-ui": "^2.8.3",
-    "gulp": "^4.0.2",
-    "gulp-print": "^5.0.0",
     "react-app-rewired": "^2.1.5"
   }
 }
