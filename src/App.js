@@ -37,3 +37,9 @@ function App() {
 }
 
 export default App;
+
+// "build": " npm run build-semantic && react-app-rewired build",
+
+// "gulp": "^4.0.2",
+//     "gulp-print": "^5.0.0",
+//     "fomantic-ui": "^2.8.3"
