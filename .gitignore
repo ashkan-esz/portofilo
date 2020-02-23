@@ -15,7 +15,6 @@
 
 # production
 /build
-/src/semantic/dist
 
 # misc
 .DS_Store

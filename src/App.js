@@ -1,8 +1,7 @@
 import React, {Suspense} from 'react';
 import {Route, Switch} from 'react-router-dom';
 // import 'semantic-ui-offline/semantic.min.css';
-// import './semantic/dist/dropdown/semantic.min.css';
-import './dropdown/semantic.min.css';
+import 'semantic-ui-less/semantic.less';
 
 const NavBar = React.lazy(() => import("./components/NavBar/NavBar"));
 const Home = React.lazy(() => import( "./pages/Home"));
@@ -37,9 +36,3 @@ function App() {
 }
 
 export default App;
-
-// "build": " npm run build-semantic && react-app-rewired build",
-
-// "gulp": "^4.0.2",
-//     "gulp-print": "^5.0.0",
-//     "fomantic-ui": "^2.8.3"

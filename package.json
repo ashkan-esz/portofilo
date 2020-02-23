@@ -7,23 +7,18 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "babel-plugin-import": "^1.13.0",
-    "customize-cra": "^0.9.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-offline": "^2.4.1-1",
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "build-semantic": "cd src/semantic && gulp build-css build-assets",
-    "watch-semantic": "cd src/semantic && npm run build-semantic && gulp watch",
-    "start": " npm run build-semantic && react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
+    "start": " craco  start",
+    "build": " craco  build",
+    "test": " craco  test",
+    "eject": " craco  eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -43,11 +38,14 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^5.6.3",
+    "@semantic-ui-react/craco-less": "^1.2.1",
     "@storybook/addon-actions": "^5.3.13",
     "@storybook/addon-links": "^5.3.13",
     "@storybook/addons": "^5.3.13",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
-    "react-app-rewired": "^2.1.5"
+    "less": "^3.11.1",
+    "semantic-ui-less": "^2.4.1"
   }
 }
