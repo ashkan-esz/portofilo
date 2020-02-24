@@ -29,8 +29,10 @@ const NavBarForDesktop = () => {
                         textAlign='center'
                         vertical
                         raised
-                        className="navbar-background-image"
-                        style={{height: '65vh'}}>
+                        style={{
+                            background: `url(${require('../../images/12.jpg')}) center/cover no-repeat`,
+                            height: '65vh'
+                        }}>
 
                         <Menu
                             fixed={fixed ? 'top' : null}

@@ -47,8 +47,10 @@ const NavBarForMobiles = () => {
                         inverted
                         textAlign='center'
                         vertical
-                        className="navbar-background-image"
-                        style={{height: '45vh'}}>
+                        style={{
+                            background: `url(${require('../../images/12.jpg')}) center/cover no-repeat`,
+                            height: '45vh'
+                        }}>
                         <Container>
                             <Menu
                                 secondary

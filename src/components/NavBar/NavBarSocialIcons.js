@@ -19,7 +19,7 @@ const NavBarSocialIcons = () => {
                 as='a'
                 animated="vertical"
                 color="instagram"
-                className="instagram-btn"
+                style={{marginLeft: '0.5em' }}
                 onClick={() => {
                     openSocial('https://www.instagram.com/ashkan__esz/')
                 }}>

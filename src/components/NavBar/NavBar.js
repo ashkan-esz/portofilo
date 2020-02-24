@@ -1,8 +1,7 @@
 import React from 'react';
 import NavBarForDesktop from './NavBarForDesktop';
 import NavBarForMobiles from './NavBarForMobiles';
-import './NavBar.css';
-
+// todo : use lazy import here
 const NavBar = () => {
     return (
         <div>

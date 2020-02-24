@@ -1,14 +1,15 @@
 import React, {Suspense} from 'react';
 import {Route, Switch} from 'react-router-dom';
-// import 'semantic-ui-offline/semantic.min.css';
 import 'semantic-ui-less/semantic.less';
+import NavBar from "./components/NavBar/NavBar";
 
-const NavBar = React.lazy(() => import("./components/NavBar/NavBar"));
+
+// const NavBar = React.lazy(() => import("./components/NavBar/NavBar"));
 const Home = React.lazy(() => import( "./pages/Home"));
 const Rezome = React.lazy(() => import("./pages/Rezome"));
 const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 
-// todo : try to comment font import in css file to see it still get the fonts or not // looks cant do that!!
+// todo : remove default font that remained yet => 80kb
 // todo : why it takes more time to load on mobiles
 // todo : navbar in mobile mode should change
 // todo : navbar in tablet mode should be handle
@@ -20,9 +21,8 @@ const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 function App() {
     return (
         <div>
-            <Suspense fallback={<h1>loading navbar....</h1>}>
-                <NavBar/>
-            </Suspense>
+
+            <NavBar/>
 
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
