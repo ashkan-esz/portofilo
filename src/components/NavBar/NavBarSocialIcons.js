@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Icon, Menu} from "semantic-ui-react";
+import SvgIcon from "./SvgIcon";
 
 const NavBarSocialIcons = () => {
     return (
@@ -7,23 +8,21 @@ const NavBarSocialIcons = () => {
             <Button
                 as='a'
                 animated='vertical'
-                color="blue"
                 onClick={() => {
                     openSocial('https://t.me/ashkanEsz')
                 }}>
-                <Button.Content visible> Telegram </Button.Content>
+                <Button.Content visible> <SvgIcon name="telegram.svg"/> </Button.Content>
                 <Button.Content hidden> <Icon name='arrow right'/></Button.Content>
             </Button>
 
             <Button
                 as='a'
                 animated="vertical"
-                color="instagram"
-                style={{marginLeft: '0.5em' }}
+                style={{marginLeft: '0.5em'}}
                 onClick={() => {
                     openSocial('https://www.instagram.com/ashkan__esz/')
                 }}>
-                <Button.Content visible> <Icon name="instagram"/></Button.Content>
+                <Button.Content visible> <SvgIcon name="instagram.svg"/></Button.Content>
                 <Button.Content hidden><Icon name='arrow right'/></Button.Content>
             </Button>
         </Menu.Item>

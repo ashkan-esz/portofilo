@@ -23,6 +23,22 @@ const SideBar = () => {
                     <ListCard/>
                 </List.Item>
 
+                <List.Item>
+                    <ListCard/>
+                </List.Item>
+
+                <List.Item>
+                    <ListCard/>
+                </List.Item>
+
+                <List.Item>
+                    <ListCard/>
+                </List.Item>
+
+                <List.Item>
+                    <ListCard/>
+                </List.Item>
+
             </List>
         </React.Fragment>
     );
