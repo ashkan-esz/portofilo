@@ -10,7 +10,7 @@ const ListCard = () => {
                     <Image
                         floated='right'
                         size='mini'
-                        src={require("../images/1.jpg")}/>
+                        src={require("../assests/images/1.jpg")}/>
 
                     <Card.Header>Steve Sanders</Card.Header>
                     <Card.Meta>Friends of Elliot</Card.Meta>

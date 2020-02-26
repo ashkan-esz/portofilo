@@ -3,8 +3,6 @@ import {Route, Switch} from 'react-router-dom';
 import 'semantic-ui-less/semantic.less';
 import NavBar from "./components/NavBar/NavBar";
 
-
-// const NavBar = React.lazy(() => import("./components/NavBar/NavBar"));
 const Home = React.lazy(() => import( "./pages/Home"));
 const Rezome = React.lazy(() => import("./pages/Rezome"));
 const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
@@ -17,6 +15,7 @@ const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 // todo : show some thing while page is loading
 // todo : use route based splitting to increase performance
 // todo : turn on service worker
+// todo: seo !!!
 
 function App() {
     return (

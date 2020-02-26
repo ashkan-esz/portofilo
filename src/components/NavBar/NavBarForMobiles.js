@@ -48,7 +48,7 @@ const NavBarForMobiles = () => {
                         textAlign='center'
                         vertical
                         style={{
-                            background: `url(${require('../../images/12.jpg')}) center/cover no-repeat`,
+                            background: `url(${require('../../assests/images/12.jpg')}) center/cover no-repeat`,
                             height: '45vh'
                         }}>
                         <Container>
