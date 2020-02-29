@@ -48,8 +48,8 @@ const NavBarForMobiles = () => {
                         textAlign='center'
                         vertical
                         style={{
-                            background: `url(${require('../../assests/images/12.jpg')}) center/cover no-repeat`,
-                            height: '45vh'
+                            background: `url(${require('../../assests/images/hero-image-mobile.jpg')}) center/cover no-repeat`,
+                            height: '50vh'
                         }}>
                         <Container>
                             <Menu
@@ -62,7 +62,7 @@ const NavBarForMobiles = () => {
                                 }}>
                                     <Icon name='sidebar'/>
                                 </Menu.Item>
-                                <NavBarSocialIcons/>
+                                <NavBarSocialIcons mobile/>
                             </Menu>
                         </Container>
                         <NavBarTitle mobile/>

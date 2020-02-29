@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// todo : fix these icons , size and background shadow
+
 const SvgIcon = ({width, height, name}) => {
     return (
         <img

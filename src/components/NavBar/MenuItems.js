@@ -13,7 +13,9 @@ const MenuItems = () => {
                 onClick={(e, {name}) => {
                     setActive(name)
                 }}>
-                Home
+                <div style={{marginLeft: '1em'}}>
+                    Home
+                </div>
             </Menu.Item>
             <Menu.Item
                 as={Link} to="/rezome"
@@ -22,11 +24,23 @@ const MenuItems = () => {
                 onClick={(e, {name}) => {
                     setActive(name)
                 }}>
-                Rezome
+                <div style={{marginLeft: '1em',color:'#3bf3ff'}}>
+                    Rezome
+                </div>
             </Menu.Item>
 
-            <Menu.Item as='a'>Company</Menu.Item>
-            <Menu.Item as='a'>Careers</Menu.Item>
+
+            <Menu.Item as='a'>
+                <div style={{marginLeft: '1em'}}>
+                    Company
+                </div>
+            </Menu.Item>
+            <Menu.Item as='a'>
+                <div style={{marginLeft: '1em'}}>
+                    Careers
+                </div>
+            </Menu.Item>
+
         </React.Fragment>
     );
 };

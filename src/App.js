@@ -7,7 +7,11 @@ const Home = React.lazy(() => import( "./pages/Home"));
 const Rezome = React.lazy(() => import("./pages/Rezome"));
 const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 
-// todo : remove default font that remained yet => 80kb
+// todo : remove default fonts too
+// todo : image optimazing
+// todo : side menu in mobile version
+// todo : hero image shouldn't be navbars background
+// todo : smaller imgages for mobile version
 // todo : why it takes more time to load on mobiles
 // todo : navbar in mobile mode should change
 // todo : navbar in tablet mode should be handle

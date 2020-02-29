@@ -4,7 +4,6 @@ import MenuItems from "./MenuItems";
 import NavBarSocialIcons from "./NavBarSocialIcons";
 import NavBarTitle from "./NavBarTitle";
 
-
 const getWidth = () => {
     const res = typeof window === 'undefined';
     return res ? Responsive.onlyTablet.minWidth : window.innerWidth;
@@ -30,8 +29,8 @@ const NavBarForDesktop = () => {
                         vertical
                         raised
                         style={{
-                            background: `url(${require('../../assests/images/12.jpg')}) center/cover no-repeat`,
-                            height: '65vh'
+                            background: `url(${require('../../assests/images/hero-image-desktop.jpg')}) center/cover no-repeat`,
+                            height: '85vh',
                         }}>
 
                         <Menu
@@ -39,7 +38,8 @@ const NavBarForDesktop = () => {
                             inverted={fixed}
                             secondary={!fixed}
                             pointing={!fixed}
-                            color={fixed ? 'grey' : null}
+                            color={fixed ? 'grey' : "teal"}
+                            borderless
                             size="large">
 
                             <Container>
@@ -49,7 +49,6 @@ const NavBarForDesktop = () => {
                         </Menu>
 
                         <NavBarTitle/>
-
                     </Segment>
                 </Visibility>
             </Responsive>
