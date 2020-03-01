@@ -38,12 +38,12 @@ const NavBarForDesktop = () => {
                             inverted={fixed}
                             secondary={!fixed}
                             pointing={!fixed}
-                            color={fixed ? 'grey' : "teal"}
+                            color={fixed ? 'violet' : "teal"}
                             borderless
                             size="large">
 
                             <Container>
-                                <MenuItems/>
+                                <MenuItems fixed={fixed}/>
                                 <NavBarSocialIcons/>
                             </Container>
                         </Menu>

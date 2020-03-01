@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {Menu} from "semantic-ui-react";
+import {Button, Menu} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 
-const MenuItems = () => {
+const MenuItems = ({fixed}) => {
     const [active, setActive] = useState('home');
     return (
         <React.Fragment>
@@ -13,9 +13,13 @@ const MenuItems = () => {
                 onClick={(e, {name}) => {
                     setActive(name)
                 }}>
-                <div style={{marginLeft: '1em'}}>
-                    Home
-                </div>
+
+                {
+                    (!fixed) ? <Button
+                        color="linkedin">
+                        Home
+                    </Button> : <div>Home</div>
+                }
             </Menu.Item>
             <Menu.Item
                 as={Link} to="/rezome"
@@ -24,21 +28,38 @@ const MenuItems = () => {
                 onClick={(e, {name}) => {
                     setActive(name)
                 }}>
-                <div style={{marginLeft: '1em',color:'#3bf3ff'}}>
-                    Rezome
-                </div>
+
+                {
+                    (!fixed) ? <Button
+                        color="linkedin">
+                        Rezome
+                    </Button> : <div>Rezome</div>
+                }
             </Menu.Item>
 
 
-            <Menu.Item as='a'>
-                <div style={{marginLeft: '1em'}}>
-                    Company
-                </div>
+            <Menu.Item
+                as='a'
+                name="company"
+                active={active === 'company'}
+                onClick={(e, {name}) => {
+                    setActive(name)
+                }}>
+                {
+                    (!fixed) ? <Button
+                        color="linkedin">
+                        Company
+                    </Button> : <div>Company</div>
+                }
             </Menu.Item>
+
             <Menu.Item as='a'>
-                <div style={{marginLeft: '1em'}}>
-                    Careers
-                </div>
+                {
+                    (!fixed) ? <Button
+                        color="linkedin">
+                        Careers
+                    </Button> : <div>Careers</div>
+                }
             </Menu.Item>
 
         </React.Fragment>

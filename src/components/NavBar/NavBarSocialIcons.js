@@ -1,30 +1,24 @@
 import React from 'react';
-import {Button, Icon, Menu} from "semantic-ui-react";
+import {Menu} from "semantic-ui-react";
 import SvgIcon from "./SvgIcon";
 
 const NavBarSocialIcons = ({mobile}) => {
     return (
         <Menu.Item position='right'>
-            <Button
-                as='a'
-                animated={(!mobile) ? 'vertical' : null}
+            <div
                 onClick={() => {
                     openSocial('https://t.me/ashkanEsz')
                 }}>
-                <Button.Content visible> <SvgIcon name="telegram.svg"/> </Button.Content>
-                {(!mobile) && <Button.Content hidden> <Icon name='arrow right'/></Button.Content>}
-            </Button>
+                <SvgIcon name="telegram.svg" width={(mobile) ? "35px" : "45px"} height={(mobile) ? "35px" : "45px"}/>
+            </div>
 
-            <Button
-                as='a'
-                animated={(!mobile) ? 'vertical' : null}
-                style={{marginLeft: '0.5em'}}
+            <div
+                style={{marginLeft: '1.8em'}}
                 onClick={() => {
                     openSocial('https://www.instagram.com/ashkan__esz/')
                 }}>
-                <Button.Content visible> <SvgIcon name="instagram.svg"/></Button.Content>
-                {(!mobile) && <Button.Content hidden><Icon name='arrow right'/></Button.Content>}
-            </Button>
+                <SvgIcon name="instagram.svg" width={(mobile) ? "35px" : "45px"} height={(mobile) ? "35px" : "45px"}/>
+            </div>
         </Menu.Item>
     );
 };

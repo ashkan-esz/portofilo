@@ -37,7 +37,7 @@ const NavBarForMobiles = () => {
                         fluid
                         vertical
                         color="grey">
-                        <MenuItems/>
+                        <MenuItems fixed={true}/>
                     </Menu>
                 </Sidebar>
 
