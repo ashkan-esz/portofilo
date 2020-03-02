@@ -43,7 +43,7 @@ const NavBarForDesktop = () => {
                             size="large">
 
                             <Container>
-                                <MenuItems fixed={fixed}/>
+                                <MenuItems color={"linkedin"} activeColor={"teal"} fixed={fixed}/>
                                 <NavBarSocialIcons/>
                             </Container>
                         </Menu>

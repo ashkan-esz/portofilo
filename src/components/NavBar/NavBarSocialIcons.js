@@ -1,11 +1,14 @@
 import React from 'react';
 import {Menu} from "semantic-ui-react";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../SvgIcon";
+
+//todo : animation for these icons
 
 const NavBarSocialIcons = ({mobile}) => {
     return (
         <Menu.Item position='right'>
             <div
+                style={{cursor:'pointer'}}
                 onClick={() => {
                     openSocial('https://t.me/ashkanEsz')
                 }}>
@@ -13,7 +16,7 @@ const NavBarSocialIcons = ({mobile}) => {
             </div>
 
             <div
-                style={{marginLeft: '1.8em'}}
+                style={{marginLeft: '1.8em',cursor:'pointer'}}
                 onClick={() => {
                     openSocial('https://www.instagram.com/ashkan__esz/')
                 }}>

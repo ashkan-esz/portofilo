@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Button, Menu} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
 
-const MenuItems = ({fixed}) => {
+const MenuItems = ({fixed, color, activeColor}) => {
     const [active, setActive] = useState('home');
     return (
         <React.Fragment>
@@ -16,7 +16,7 @@ const MenuItems = ({fixed}) => {
 
                 {
                     (!fixed) ? <Button
-                        color="linkedin">
+                        color={(active === 'home') ? activeColor : color}>
                         Home
                     </Button> : <div>Home</div>
                 }
@@ -31,7 +31,7 @@ const MenuItems = ({fixed}) => {
 
                 {
                     (!fixed) ? <Button
-                        color="linkedin">
+                        color={(active === 'rezome') ? activeColor : color}>
                         Rezome
                     </Button> : <div>Rezome</div>
                 }
@@ -47,7 +47,7 @@ const MenuItems = ({fixed}) => {
                 }}>
                 {
                     (!fixed) ? <Button
-                        color="linkedin">
+                        color={(active === 'company') ? activeColor : color}>
                         Company
                     </Button> : <div>Company</div>
                 }
@@ -56,7 +56,7 @@ const MenuItems = ({fixed}) => {
             <Menu.Item as='a'>
                 {
                     (!fixed) ? <Button
-                        color="linkedin">
+                        color={color}>
                         Careers
                     </Button> : <div>Careers</div>
                 }

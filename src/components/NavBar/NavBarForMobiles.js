@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {Container, Icon, Menu, Responsive, Segment, Sidebar} from "semantic-ui-react";
+import {Container, Menu, Responsive, Segment, Sidebar} from "semantic-ui-react";
 import NavBarSocialIcons from "./NavBarSocialIcons";
 import MenuItems from "./MenuItems";
 import NavBarTitle from "./NavBarTitle";
-
+import SvgIcon from "../SvgIcon";
 
 const getWidth = () => {
     const res = typeof window === 'undefined';
@@ -11,7 +11,7 @@ const getWidth = () => {
 };
 
 const NavBarForMobiles = () => {
-    const [sideBar, setSideBar] = useState(false);
+    const [isVisible, setVisible] = useState(false);
 
     return (
         <div>
@@ -25,10 +25,8 @@ const NavBarForMobiles = () => {
                     animation="slide along"
                     width="thin"
                     vertical
-                    onHide={() => {
-                        setSideBar(false)
-                    }}
-                    visible={sideBar}>
+                    onHide={() => {setVisible(false)}}
+                    visible={isVisible}>
 
                     <Menu
                         secondary
@@ -37,12 +35,12 @@ const NavBarForMobiles = () => {
                         fluid
                         vertical
                         color="grey">
-                        <MenuItems fixed={true}/>
+                        <MenuItems fixed={true} color={"blue"} activeColor={"teal"}/>
                     </Menu>
                 </Sidebar>
 
 
-                <Sidebar.Pusher dimmed={sideBar}>
+                <Sidebar.Pusher dimmed={isVisible}>
                     <Segment
                         inverted
                         textAlign='center'
@@ -57,10 +55,9 @@ const NavBarForMobiles = () => {
                                 pointing
                                 size='large'>
 
-                                <Menu.Item onClick={() => {
-                                    setSideBar(true)
-                                }}>
-                                    <Icon name='sidebar'/>
+                                <Menu.Item onClick={() => {setVisible(true)}}>
+                                    {/*<Icon name='sidebar'/>*/}
+                                    <SvgIcon name={'humburger.svg'}/>
                                 </Menu.Item>
                                 <NavBarSocialIcons mobile/>
                             </Menu>
