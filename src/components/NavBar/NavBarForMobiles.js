@@ -21,22 +21,29 @@ const NavBarForMobiles = () => {
                 maxWidth={Responsive.onlyMobile.maxWidth}>
 
                 <Sidebar
-                    as={Menu}
                     animation="slide along"
                     width="thin"
-                    vertical
                     onHide={() => {setVisible(false)}}
                     visible={isVisible}>
 
-                    <Menu
-                        secondary
-                        pointing
-                        size="huge"
-                        fluid
+                    <Segment
+                        style={{height: '100%', padding: 0}}
                         vertical
-                        color="grey">
-                        <MenuItems fixed={true} color={"blue"} activeColor={"teal"}/>
-                    </Menu>
+                        textAlign="center">
+
+                        <Menu
+                            style={{height: '100%'}}
+                            secondary
+                            pointing
+                            size="huge"
+                            fluid
+                            vertical
+                            inverted
+                            color="teal">
+                            <MenuItems fixed={true} color={"blue"} activeColor={"teal"}/>
+                        </Menu>
+
+                    </Segment>
                 </Sidebar>
 
 
@@ -56,7 +63,6 @@ const NavBarForMobiles = () => {
                                 size='large'>
 
                                 <Menu.Item onClick={() => {setVisible(true)}}>
-                                    {/*<Icon name='sidebar'/>*/}
                                     <SvgIcon name={'humburger.svg'}/>
                                 </Menu.Item>
                                 <NavBarSocialIcons mobile/>

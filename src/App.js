@@ -7,7 +7,6 @@ const Home = React.lazy(() => import( "./pages/Home"));
 const Rezome = React.lazy(() => import("./pages/Rezome"));
 const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 
-// todo : remove default icons
 // todo : compress images again
 // todo : image optimazing
 // todo : side menu in mobile version
