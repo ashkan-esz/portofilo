@@ -9,8 +9,6 @@ const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 
 // todo : compress images again
 // todo : image optimazing
-// todo : side menu in mobile version
-// todo : navbar in mobile mode should change
 // todo : error boundaries
 // todo : turn on service worker
 // todo: seo !!!

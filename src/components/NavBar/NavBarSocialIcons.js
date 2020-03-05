@@ -2,8 +2,6 @@ import React from 'react';
 import {Menu} from "semantic-ui-react";
 import SvgIcon from "../SvgIcon";
 
-//todo : animation for these icons
-
 const NavBarSocialIcons = ({mobile}) => {
     return (
         <Menu.Item position='right'>

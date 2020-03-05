@@ -13,7 +13,8 @@ const NavBarTitle = ({mobile}) => {
                     marginBottom: 0,
                     fontSize: mobile ? '1.7em' : '3.8em',
                     marginTop: mobile ? '2.5em' : '2em ',
-                    color : '#72ff77'
+                    color : 'darkBlue',
+                    WebkitTextStroke: mobile ?'0px darkgrey' :'1px darkgrey',
                 }}
             />
         </Container>
