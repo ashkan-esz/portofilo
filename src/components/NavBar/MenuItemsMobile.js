@@ -1,32 +1,31 @@
 import React, {useState} from 'react';
-import {Button, Menu} from "semantic-ui-react";
 import {Link} from 'react-router-dom';
+import {Dropdown} from "semantic-ui-react";
 
-const MenuItems = ({color, activeColor}) => {
+const MenuItems = () => {
     const [active, setActive] = useState('home');
     return (
         <React.Fragment>
-
-            <Menu.Item
+            <Dropdown.Item
                 as={Link} to="/"
+                active={active ==='home'}
                 name="home"
                 onClick={(e, {name}) => {setActive(name)}}>
-
-                <Button color={(active === 'home') ? activeColor : color}>
+                <div style={{color:'#ffffff'}}>
                     Home
-                </Button>
-            </Menu.Item>
+                </div>
+            </Dropdown.Item>
 
-            <Menu.Item
+            <Dropdown.Item
+                style={{color:'red'}}
                 as={Link} to="/projects"
+                active={active ==='projects'}
                 name="projects"
                 onClick={(e, {name}) => {setActive(name)}}>
-
-                <Button color={(active === 'projects') ? activeColor : color}>
+                <div style={{color:'#ffffff'}}>
                     Projects
-                </Button>
-            </Menu.Item>
-
+                </div>
+            </Dropdown.Item>
         </React.Fragment>
     );
 };

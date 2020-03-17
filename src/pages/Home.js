@@ -41,6 +41,7 @@ const Home = () => {
             </Segment>
 
         </React.Fragment>
+
     );
 };
 

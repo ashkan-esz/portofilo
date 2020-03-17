@@ -16,6 +16,8 @@ const SideBar = () => {
                 <ListCard/>
                 <ListCard/>
                 <ListCard/>
+                <ListCard/>
+                <ListCard/>
             </Card.Group>
         </React.Fragment>
     );

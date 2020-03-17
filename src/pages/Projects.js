@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Rezome = props => {
+const Projects = props => {
     return (
         <div>
             hello from rezome page
@@ -9,4 +9,4 @@ const Rezome = props => {
     );
 };
 
-export default Rezome;
+export default Projects;
