@@ -2,27 +2,22 @@ import React from 'react';
 import {Header} from "semantic-ui-react";
 import Titles from "./Titles";
 import TalentsList from "./TalentsList";
-
+import './About.css';
 
 const About = () => {
     return (
-        <div style={{
-            // backgroundColor:'#e4fffc',
-            borderTop: '3px solid teal'}}>
+        <div className={'about'}>
 
             <Header
-                style={{paddingTop: '2em',fontSize:'2.5em'}}
+                className={'about-header'}
                 as="h1"
                 textAlign={"center"}
                 color="black">
                 <Header.Content>ABOUT</Header.Content>
-                <hr style={{textAlign:'center',width:'2em',border: '3px solid black'}}/>
+                <hr/>
             </Header>
-
             <Titles/>
             <TalentsList/>
-
-
         </div>
     );
 };

@@ -7,22 +7,24 @@ const Talent = ({text, color, percent}) => {
     return (
         <React.Fragment>
 
-            <Grid.Column width={mobile ? "3" : "2"} textAlign={"center"} style={{paddingRight: 0}}>
+            <Grid.Column className={'talent-col-label'} width={mobile ? "3" : "2"} textAlign={"center"}>
                 <Label
-                    style={{width: mobile ? '15vw' : '4.3vw'}}
+                    className={mobile ? 'talent-col-label-mobile' : 'talent-col-label-desktop'}
                     pointing={"right"}
+                    color={'teal'}
                     content={text}
                 />
             </Grid.Column>
 
             <Grid.Column width={mobile ? "13" : "14"}>
                 <Progress
-                    style={{paddingLeft: 0, marginBottom: 0}}
+                    className={'talent-progressbar'}
                     size="medium"
                     color={color}
                     percent={percent}
                     progress="percent"/>
             </Grid.Column>
+
         </React.Fragment>
     );
 };

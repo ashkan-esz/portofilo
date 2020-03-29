@@ -27,10 +27,10 @@ const HeroTitle = ({mobile}) => {
             {(location.pathname === '/') && <div className={'hero-buttons'}>
                 <Button
                     onClick={() => {
-                        window.scrollTo({top: document.documentElement.clientHeight});
+                        window.scrollTo({top: document.documentElement.clientHeight,behavior: 'smooth'});
                     }}
                     color={"black"}
-                    content={'Know More'}/>
+                    content={'See More'}/>
 
                 <Button
                     className={'hero-buttons-button'}

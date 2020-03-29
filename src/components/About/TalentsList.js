@@ -1,44 +1,45 @@
 import React from 'react';
 import {Grid, Segment} from "semantic-ui-react";
 import Talent from "./Talent";
+import ItsMe from "./ItsMe";
 
 const TalentsList = () => {
     return (
-        <div style={{marginTop: '1em'}}>
-            <Grid container centered stackable relaxed style={{marginTop:'6vh'}}>
+        <div>
+            <Grid className={'talent-list'} container centered stackable relaxed>
                 <Grid.Row centered columns={"2"}>
 
                     <Grid.Column width={"7"}>
-                        <h1> hi its ashkan</h1>
+                        <ItsMe/>
                     </Grid.Column>
 
                     <Grid.Column width={"8"}>
-                        <Segment>
-
+                        <Segment className={'talent-list-segment'}>
                             <Grid>
-
-                                <Grid.Row columns={"2"} style={{paddingBottom:0}}>
-                                    <Talent text={'react'} percent={40} color={'teal'}/>
+                                <Grid.Row className={'talent-row'} columns={"2"}>
+                                    <Talent text={'React'} percent={55} color={'green'}/>
                                 </Grid.Row>
 
-                                <Grid.Row columns={"2"} style={{paddingBottom:0}}>
-                                    <Talent text={'html'} percent={60} color={'red'}/>
+                                <Grid.Row className={'talent-row'} columns={"2"} >
+                                    <Talent text={'Nodejs'} percent={15} color={'blue'}/>
                                 </Grid.Row>
 
-                                <Grid.Row columns={"2"} style={{paddingBottom:0}}>
-                                    <Talent text={'css'} percent={30} color={'olive'}/>
+                                <Grid.Row className={'talent-row'} columns={"2"} >
+                                    <Talent text={'JS'} percent={60} color={'violet'}/>
                                 </Grid.Row>
 
+                                <Grid.Row className={'talent-row'} columns={"2"} >
+                                    <Talent text={'HTML'} percent={75} color={'orange'}/>
+                                </Grid.Row>
 
+                                <Grid.Row className={'talent-row'} columns={"2"} >
+                                    <Talent text={'CSS'} percent={45} color={'olive'}/>
+                                </Grid.Row>
 
-
+                                <Grid.Row className={'talent-row-last'} columns={"2"} >
+                                    <Talent text={'React Native'} percent={1} color={'yellow'}/>
+                                </Grid.Row>
                             </Grid>
-
-
-
-
-
-
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
