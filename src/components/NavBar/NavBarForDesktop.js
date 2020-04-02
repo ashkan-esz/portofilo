@@ -54,11 +54,13 @@ const NavBarForDesktop = () => {
 
                     <Menu.Item
                         className={'menu-item2'}
-                        as={Link} to="/projects"
+                        // as={Link} to="/projects"
+                        disabled
                         name="projects"
                         onClick={handleItemClick}>
 
                         <Button
+                            disabled
                             active={active === 'projects'}
                             basic={!(active === 'projects')}
                             color={(active === 'projects') ? 'teal' : "violet"}>

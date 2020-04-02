@@ -36,7 +36,8 @@ const HeroTitle = ({mobile}) => {
                     className={'hero-buttons-button'}
                     as={Link} to="/projects"
                     color={"grey"}
-                    content={'See My Works'}/>
+                    disabled
+                    content={'My Works'}/>
             </div>}
         </Container>
     );

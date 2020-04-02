@@ -1,8 +1,17 @@
 import React from 'react';
 
-const Project = () => {
+const Project = ({imageName,text}) => {
     return (
-        <div>
+        <div className={'project'}>
+
+            <img
+                 className={'project-image'}
+                 alt={'portofilo-site'}
+                 src={require(`../../assests/images/${imageName}`)}/>
+
+            <div className={'project-text'}>
+                {text}
+            </div>
 
         </div>
     );

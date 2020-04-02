@@ -25,7 +25,7 @@ const TalentsList = () => {
                                 </Grid.Row>
 
                                 <Grid.Row className={'talent-row'} columns={"2"} >
-                                    <Talent text={'JS'} percent={60} color={'violet'}/>
+                                    <Talent text={'JS'} percent={50} color={'violet'}/>
                                 </Grid.Row>
 
                                 <Grid.Row className={'talent-row'} columns={"2"} >

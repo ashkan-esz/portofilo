@@ -12,7 +12,6 @@ const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 // todo : use animation   and  show rendered component with ease
 // todo : animation on navBar header words
 // todo : site logo in different size
-// todo : move all of the inline styling to app.css file
 // todo : error boundaries
 // todo : turn on service worker
 // todo: seo !!!

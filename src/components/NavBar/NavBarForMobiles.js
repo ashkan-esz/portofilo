@@ -22,7 +22,10 @@ const NavBarForMobiles = () => {
                 getWidth={getWidth}
                 maxWidth={Responsive.onlyMobile.maxWidth}>
 
-                <Menu secondary pointing size='large'>
+                <Menu
+                    secondary
+                    pointing
+                    size='large'>
 
                     <Dropdown
                         item
@@ -44,6 +47,7 @@ const NavBarForMobiles = () => {
                                 as={Link} to="/projects"
                                 active={active === 'projects'}
                                 name="projects"
+                                disabled
                                 onClick={handleItemClick}>
                                 <div
                                     className={(active === 'projects') ? 'dropdown-menu-active' : 'dropdown-menu-deactive'}>

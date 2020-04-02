@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, Header} from "semantic-ui-react";
 import './ProjectsList.css';
+import Project from "./project";
 
 const ProjectsList = () => {
     return (
@@ -11,14 +12,16 @@ const ProjectsList = () => {
                 as="h1"
                 textAlign={"center"}
                 color="black">
-                <Header.Content>Projects</Header.Content>
+                <Header.Content>My Recent Work</Header.Content>
                 <hr/>
             </Header>
 
-            <Grid container centered stackable relaxed>
-                <Grid.Row columns={"4"}  centered>
+            <Grid className={'projects-list-grid'} container centered stackable relaxed>
+                <Grid.Row columns={"3"} centered>
                     <Grid.Column textAlign={"center"}>
-
+                        <Project
+                            imageName={'portofilo-site.jpg'}
+                            text={'my first website for profile'}/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
