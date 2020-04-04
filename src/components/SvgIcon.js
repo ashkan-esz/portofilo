@@ -11,8 +11,7 @@ const SvgIcon = ({name,size}) => {
 };
 
 SvgIcon.propTypes = {
-    width: PropTypes.string,
-    height: PropTypes.string,
+    size: PropTypes.string,
     name: PropTypes.string.isRequired,
 };
 
