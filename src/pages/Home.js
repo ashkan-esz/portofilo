@@ -1,30 +1,16 @@
 import React from 'react';
-import {Grid, Header, Segment} from "semantic-ui-react";
-import SideBar from "../components/SideBar";
+import About from "../components/About/About";
+import ProjectsList from "../components/Projects/ProjectsList";
+import Footer from "../components/Footer";
 
 const Home = () => {
     return (
         <React.Fragment>
-            <Segment>
-                <Grid verticalAlign="middle" stackable divided="vertically">
-                    <Grid.Row color='grey'>
-                        <Grid.Column width={4}>
-                            <SideBar/>
-                        </Grid.Column>
-                        <Grid.Column width={8} floated="right">
-                            <h1>right side of the page</h1>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
-            <Segment>
-                <Header as="h1" >
-                    new part of the site
-                </Header>
-            </Segment>
+            <About/>
+            <ProjectsList/>
+            <Footer/>
         </React.Fragment>
     );
 };
-
 
 export default Home;

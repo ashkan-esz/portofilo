@@ -1,0 +1,94 @@
+.hero-image {
+    background: url('../../assests/images/hero-image.jpg') center/cover no-repeat;
+    height: 100vh;
+}
+
+.navbar-desktop {
+    padding-top: 1.5vh;
+}
+
+.dropdown-menu {
+    background-color: slategrey !important;
+    margin-left: 2vw !important;
+}
+
+.dropdown-menu-active {
+    color: palegreen;
+}
+
+.dropdown-menu-deactive {
+    color: white;
+}
+
+.logo {
+    padding: 0 !important;
+    margin-left: 1.7vw !important;
+}
+
+.logo div {
+    margin-top: -113px;
+}
+
+.logo-mobile {
+    padding: 0 !important;
+    margin-right: 4.5vw !important;
+}
+
+.logo-mobile div {
+    margin-top: -175px;
+}
+
+.menu-item1 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 6vw !important;
+}
+
+.menu-item2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 1.1vw !important;
+}
+
+.hero-title {
+    color: whitesmoke !important;
+}
+
+.hero-title1-desktop {
+    font-size: x-large !important;
+    margin-top: 23vh !important;
+}
+
+.hero-title1-mobile {
+    font-size: x-large !important;
+    margin-top: 22vh !important;
+}
+
+.hero-title2-desktop {
+    font-size: 6rem !important;
+    margin-top: 2vh !important;
+}
+
+.hero-title2-mobile {
+    font-size: 3.7rem !important;
+    margin-top: 4vh !important;
+}
+
+.hero-title3-desktop {
+    font-size: 2rem !important;
+    margin-top: 2vh !important;
+}
+
+.hero-title3-mobile {
+    font-size: 1.8rem !important;
+    margin-top: 2vh !important;
+}
+
+.hero-buttons {
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.hero-buttons-button {
+    margin-left: 2vw !important;
+}

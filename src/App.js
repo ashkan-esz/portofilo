@@ -4,20 +4,15 @@ import 'semantic-ui-less/semantic.less';
 import NavBar from "./components/NavBar/NavBar";
 
 const Home = React.lazy(() => import( "./pages/Home"));
-const Rezome = React.lazy(() => import("./pages/Rezome"));
+const Projects = React.lazy(() => import("./pages/Projects"));
 const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 
-// todo : remove default fonts too
-// todo : image optimazing
-// todo : side menu in mobile version
-// todo : hero image shouldn't be navbars background
-// todo : smaller imgages for mobile version
-// todo : why it takes more time to load on mobiles
-// todo : navbar in mobile mode should change
-// todo : navbar in tablet mode should be handle
+
+// todo : animation for hero title massage
+// todo : use animation   and  show rendered component with ease
+// todo : animation on navBar header words
+// todo : site logo in different size
 // todo : error boundaries
-// todo : show some thing while page is loading
-// todo : use route based splitting to increase performance
 // todo : turn on service worker
 // todo: seo !!!
 
@@ -30,7 +25,7 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/rezome" component={Rezome}/>
+                    <Route exact path="/projects" component={Projects}/>
                     <Route component={PageNotFound}/>
                 </Switch>
             </Suspense>

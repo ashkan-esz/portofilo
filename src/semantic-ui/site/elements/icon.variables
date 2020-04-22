@@ -4,3 +4,7 @@
 
 @importOutlineIcons: false;
 @importBrandIcons: false;
+
+@fontName: '';
+@fallbackSRC: '';
+@src: '';

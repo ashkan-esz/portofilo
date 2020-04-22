@@ -1,56 +1,75 @@
-import React, {useState} from 'react';
-import {Container, Menu, Responsive, Segment, Visibility} from "semantic-ui-react";
-import MenuItems from "./MenuItems";
-import NavBarSocialIcons from "./NavBarSocialIcons";
-import NavBarTitle from "./NavBarTitle";
-
-const getWidth = () => {
-    const res = typeof window === 'undefined';
-    return res ? Responsive.onlyTablet.minWidth : window.innerWidth;
-};
+import React, {useEffect, useState} from 'react';
+import {Button, Menu, Responsive} from "semantic-ui-react";
+import getWidth from "../getWidth";
+import SvgIcon from "../SvgIcon";
+import {Link, useLocation} from "react-router-dom";
+import HeroTitle from "./HeroTitle";
 
 const NavBarForDesktop = () => {
-    const [fixed, setFixed] = useState(false);
-
+    const [active, setActive] = useState('home');
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname === '/') setActive('home');
+        else if (location.pathname === '/projects') setActive('projects');
+    }, [location]);
+    const handleItemClick = (e, {name}) => {
+        setActive(name)
+    };
     return (
         <div>
-            <Responsive minWidth={Responsive.onlyTablet.minWidth} getWidth={getWidth}>
-                <Visibility
-                    once={false}
-                    onBottomPassedReverse={() => {
-                        setFixed(false)
-                    }}
-                    onBottomPassed={() => {
-                        setFixed(true)
-                    }}>
-                    <Segment
-                        inverted
-                        textAlign='center'
-                        vertical
-                        raised
-                        style={{
-                            background: `url(${require('../../assests/images/hero-image-desktop.jpg')}) center/cover no-repeat`,
-                            height: '85vh',
-                        }}>
+            <Responsive
+                className={'hero-image'}
+                getWidth={getWidth}
+                minWidth={Responsive.onlyTablet.minWidth}>
 
-                        <Menu
-                            fixed={fixed ? 'top' : null}
-                            inverted={fixed}
-                            secondary={!fixed}
-                            pointing={!fixed}
-                            color={fixed ? 'grey' : "teal"}
-                            borderless
-                            size="large">
+                <Menu
+                    className={'navbar-desktop'}
+                    borderless
+                    secondary
+                    size="large">
 
-                            <Container>
-                                <MenuItems/>
-                                <NavBarSocialIcons/>
-                            </Container>
-                        </Menu>
+                    <Menu.Item
+                        className={'logo'}
+                        as={Link} to="/"
+                        name="home"
+                        onClick={handleItemClick}>
+                        <div>
+                            <SvgIcon name="logo3.svg" size={"150px"}/>
+                        </div>
+                    </Menu.Item>
 
-                        <NavBarTitle/>
-                    </Segment>
-                </Visibility>
+                    <Menu.Item
+                        className={'menu-item1'}
+                        as={Link} to="/"
+                        name="home"
+                        onClick={handleItemClick}>
+
+                        <Button
+                            active={active === 'home'}
+                            basic={!(active === 'home')}
+                            color={(active === 'home') ? 'teal' : "violet"}>
+                            Home
+                        </Button>
+                    </Menu.Item>
+
+                    <Menu.Item
+                        className={'menu-item2'}
+                        // as={Link} to="/projects"
+                        disabled
+                        name="projects"
+                        onClick={handleItemClick}>
+
+                        <Button
+                            disabled
+                            active={active === 'projects'}
+                            basic={!(active === 'projects')}
+                            color={(active === 'projects') ? 'teal' : "violet"}>
+                            Projects
+                        </Button>
+                    </Menu.Item>
+                </Menu>
+
+                <HeroTitle/>
             </Responsive>
         </div>
     );

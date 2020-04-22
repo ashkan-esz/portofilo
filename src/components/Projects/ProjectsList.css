@@ -1,0 +1,51 @@
+.projects {
+    border-top: 4px solid teal;
+    padding-bottom: 10vh;
+}
+
+.projects-header {
+    padding-top: 6vh !important;
+    font-size: 2.5rem !important;
+}
+
+.projects-header hr {
+    text-align: center;
+    width: 2em;
+    border: 3px solid black;
+}
+
+.projects-list-grid{
+    padding-top: 3vh !important;
+}
+
+.project{
+    position: relative;
+}
+
+.project-image{
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.project-text{
+    position: absolute;
+    top: 35%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.project:hover .project-text{
+    opacity: 1;
+}
+
+.project:hover .project-image{
+    filter:blur(2px);
+}

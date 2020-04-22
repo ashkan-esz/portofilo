@@ -1,74 +1,75 @@
-import React, {useState} from 'react';
-import {Container, Icon, Menu, Responsive, Segment, Sidebar} from "semantic-ui-react";
-import NavBarSocialIcons from "./NavBarSocialIcons";
-import MenuItems from "./MenuItems";
-import NavBarTitle from "./NavBarTitle";
-
-
-const getWidth = () => {
-    const res = typeof window === 'undefined';
-    return res ? Responsive.onlyTablet.minWidth : window.innerWidth;
-};
+import React, {useEffect, useState} from 'react';
+import {Dropdown, Menu, Responsive} from "semantic-ui-react";
+import HeroTitle from "./HeroTitle";
+import SvgIcon from "../SvgIcon";
+import getWidth from "../getWidth";
+import {Link, useLocation} from "react-router-dom";
 
 const NavBarForMobiles = () => {
-    const [sideBar, setSideBar] = useState(false);
-
+    const [active, setActive] = useState('home');
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname === '/') setActive('home');
+        else if (location.pathname === '/projects') setActive('projects');
+    }, [location]);
+    const handleItemClick = (e, {name}) => {
+        setActive(name)
+    };
     return (
         <div>
             <Responsive
-                as={Sidebar.Pushable}
+                className={'hero-image'}
                 getWidth={getWidth}
                 maxWidth={Responsive.onlyMobile.maxWidth}>
 
-                <Sidebar
-                    as={Menu}
-                    animation="slide along"
-                    width="thin"
-                    vertical
-                    onHide={() => {
-                        setSideBar(false)
-                    }}
-                    visible={sideBar}>
+                <Menu
+                    secondary
+                    pointing
+                    size='large'>
 
-                    <Menu
-                        secondary
-                        pointing
-                        size="huge"
-                        fluid
-                        vertical
-                        color="grey">
-                        <MenuItems/>
-                    </Menu>
-                </Sidebar>
+                    <Dropdown
+                        item
+                        icon={<SvgIcon name={'humburger.svg'}/>}>
+                        <Dropdown.Menu
+                            className={'dropdown-menu'}>
+                            <Dropdown.Item
+                                as={Link} to="/"
+                                active={active === 'home'}
+                                name="home"
+                                onClick={handleItemClick}>
+                                <div
+                                    className={(active === 'home') ? 'dropdown-menu-active' : 'dropdown-menu-deactive'}>
+                                    Home
+                                </div>
+                            </Dropdown.Item>
 
+                            <Dropdown.Item
+                                as={Link} to="/projects"
+                                active={active === 'projects'}
+                                name="projects"
+                                disabled
+                                onClick={handleItemClick}>
+                                <div
+                                    className={(active === 'projects') ? 'dropdown-menu-active' : 'dropdown-menu-deactive'}>
+                                    Projects
+                                </div>
+                            </Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
 
-                <Sidebar.Pusher dimmed={sideBar}>
-                    <Segment
-                        inverted
-                        textAlign='center'
-                        vertical
-                        style={{
-                            background: `url(${require('../../assests/images/hero-image-mobile.jpg')}) center/cover no-repeat`,
-                            height: '50vh'
-                        }}>
-                        <Container>
-                            <Menu
-                                secondary
-                                pointing
-                                size='large'>
+                    <Menu.Item
+                        className={'logo-mobile'}
+                        as={Link} to="/"
+                        position={"right"}
+                        name="home"
+                        onClick={handleItemClick}>
+                        <div>
+                            <SvgIcon name="logo3.svg" size={"150px"}/>
+                        </div>
+                    </Menu.Item>
+                </Menu>
 
-                                <Menu.Item onClick={() => {
-                                    setSideBar(true)
-                                }}>
-                                    <Icon name='sidebar'/>
-                                </Menu.Item>
-                                <NavBarSocialIcons mobile/>
-                            </Menu>
-                        </Container>
-                        <NavBarTitle mobile/>
-                    </Segment>
-                </Sidebar.Pusher>
-
+                <HeroTitle mobile/>
             </Responsive>
         </div>
     );
